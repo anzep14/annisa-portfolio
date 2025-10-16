@@ -94,18 +94,28 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  padding-top: 120px;
+  padding-top: 160px;
   flex-wrap: wrap;
-  min-height: 100vh;
+  min-height: 150vh;
   background: linear-gradient(to bottom right, #763f0c, #fff);
 }
 
+/* Foto utama bulat & proporsional */
 .main-container .image img {
-  width: 450px;
-  height: 450px;
-  border-radius: 50%;
-  object-fit: cover;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  width: 500px; /* ukuran default untuk desktop */
+  height: 500px; /* bikin tinggi sama dengan lebar */
+  border-radius: 50%; /* bikin bulat */
+  object-fit: cover; /* tetap proporsional, jangan lonjong */
+  display: block;
+  margin: 0 auto; /* tengahin foto */
+}
+
+/* Responsif untuk HP */
+@media (max-width: 768px) {
+  .main-container .image img {
+    width: 300px; /* ukuran lebih kecil di HP */
+    height: 300px;
+  }
 }
 
 .content {
@@ -236,51 +246,5 @@ footer {
   }
   .hamburg {
     display: block;
-  }
-  /* === RESPONSIVE DESIGN (untuk HP) === */
-  @media (max-width: 768px) {
-    .main-container {
-      flex-direction: column;
-      text-align: center;
-    }
-
-    .main-container .image img {
-      width: 200px;
-      margin-bottom: 20px;
-    }
-
-    .section {
-      padding: 40px 20px;
-    }
-
-    h1 {
-      font-size: 1.8rem;
-    }
-
-    p {
-      font-size: 0.95rem;
-    }
-
-    .services-list {
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .service-box {
-      width: 90%;
-      margin-bottom: 20px;
-    }
-  }
-  .main-container .image img {
-    width: 200px; /* ukuran bisa kamu ubah */
-    height: 200px; /* bikin sama biar bulat */
-    border-radius: 50%; /* bikin foto jadi bulat */
-    object-fit: cover; /* biar fotonya gak ketarik */
-  }
-  @media (max-width: 768px) {
-    .main-container .image img {
-      width: 150px;
-      height: 150px;
-    }
   }
 }
