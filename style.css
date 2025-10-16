@@ -92,12 +92,22 @@ nav {
 /* Main Section */
 .main-container {
   display: flex;
-  align-items: center;
-  justify-content: space-around;
-  padding-top: 160px;
-  flex-wrap: wrap;
-  min-height: 150vh;
-  background: linear-gradient(to bottom right, #763f0c, #fff);
+  flex-wrap: wrap; /* biar responsive di HP */
+  align-items: center; /* vertical center */
+  justify-content: center; /* horizontal center */
+  text-align: center; /* teks di dalam juga tengah */
+  padding: 50px 20px;
+  gap: 20px; /* jarak antara foto & content */
+  background: linear-gradient(to bottom right, #5c3a27, #7d4d31);
+}
+
+@media (max-width: 768px) {
+  .main-container {
+    flex-direction: column; /* foto di atas, teks di bawah */
+  }
+  .main-container .content {
+    text-align: center;
+  }
 }
 
 /* Foto utama bulat & proporsional */
