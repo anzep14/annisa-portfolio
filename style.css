@@ -271,4 +271,16 @@ footer {
       margin-bottom: 20px;
     }
   }
+  .main-container .image img {
+    width: 200px; /* ukuran bisa kamu ubah */
+    height: 200px; /* bikin sama biar bulat */
+    border-radius: 50%; /* bikin foto jadi bulat */
+    object-fit: cover; /* biar fotonya gak ketarik */
+  }
+  @media (max-width: 768px) {
+    .main-container .image img {
+      width: 150px;
+      height: 150px;
+    }
+  }
 }
